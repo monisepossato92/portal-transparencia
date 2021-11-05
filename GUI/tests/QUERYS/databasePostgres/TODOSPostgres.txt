@@ -1,0 +1,6 @@
+SELECT COUNT(*)
+FROM efmpprocesso
+JOIN esajtipolocal ON efmpprocesso.cdtipolocal = esajtipolocal.cdtipolocal AND esajtipolocal.flportaltransparen='S'
+JOIN esajsitprocesso ON efmpprocesso.cdsituacaoprocesso = esajsitprocesso.cdsituacaoprocesso
+JOIN efmptipoprocesso ON efmpprocesso.cdtipoprocesso=efmptipoprocesso.cdtipoprocesso AND efmptipoprocesso.flexibenabuscaweb='S'
+WHERE efmpprocesso.flsegredojustica='${SIGILO}' AND efmptipoprocesso.cdtipoprocesso = '${TIPO_PROCEDIMENTO}' AND efmpprocesso.cdsituacaoprocesso IN ('A','B','D','E','J','L','N','P','Q','S','Z','O','V','Y','R','T')

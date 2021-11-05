@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20191011 10:18:44.785" rpa="false">
+<suite id="s1" name="Story-214266" source="C:\UNJ\sajmp-oraculo-frontend\acceptance-tests\GUI\tests\Story-214266">
+<suite id="s1-s1" name="TestSuiteProcedimentoInvestigatorio" source="C:\UNJ\sajmp-oraculo-frontend\acceptance-tests\GUI\tests\Story-214266\TestSuiteProcedimentoInvestigatorio.robot">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Abrir navegador</arg>
+<arg>AND</arg>
+<arg>Conectar base ${BANCO}</arg>
+<arg>AND</arg>
+<arg>Definir diretório database</arg>
+<arg>AND</arg>
+<arg>Inserir massa de dados PIC</arg>
+</arguments>
+<kw name="Abrir navegador" library="Resource">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isPipeline}'=='False'</arg>
+<arg>Open Browser</arg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191011 10:18:45.357" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20191011 10:18:45.357" endtime="20191011 10:18:48.565"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:45.356" endtime="20191011 10:18:48.565"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isPipeline}'=='True'</arg>
+<arg>Open Browser</arg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=http://${URL_PIPELINE}:4444/wd/hub</arg>
+</arguments>
+<status status="PASS" starttime="20191011 10:18:48.566" endtime="20191011 10:18:48.566"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191011 10:18:48.566" endtime="20191011 10:18:49.685"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:45.356" endtime="20191011 10:18:49.686"></status>
+</kw>
+<kw name="Conectar base Postgres" library="Conexao">
+<kw name="Connect To Database" library="DatabaseLibrary">
+<doc>Loads the DB API 2.0 module given `dbapiModuleName` then uses it to
+connect to the database using `dbName`, `dbUsername`, and `dbPassword`.</doc>
+<arguments>
+<arg>psycopg2</arg>
+<arg>${DBName}</arg>
+<arg>${DBUser}</arg>
+<arg>${DBPass}</arg>
+<arg>${DBHost}</arg>
+<arg>${DBPort}</arg>
+</arguments>
+<msg timestamp="20191011 10:18:49.713" level="INFO">Connecting using : psycopg2.connect(database=sigtint, user=saj, password=agesune1, host=172.23.70.39, port=5432) </msg>
+<status status="PASS" starttime="20191011 10:18:49.686" endtime="20191011 10:18:49.738"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:49.686" endtime="20191011 10:18:49.738"></status>
+</kw>
+<kw name="Definir diretório Database" library="Conexao">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>database${BANCO}</arg>
+</arguments>
+<assign>
+<var>${DIR}</var>
+</assign>
+<msg timestamp="20191011 10:18:49.739" level="INFO">${DIR} = databasePostgres</msg>
+<status status="PASS" starttime="20191011 10:18:49.739" endtime="20191011 10:18:49.739"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${DIR}</arg>
+<arg>${DIR}</arg>
+</arguments>
+<msg timestamp="20191011 10:18:49.740" level="INFO">${DIR} = databasePostgres</msg>
+<status status="PASS" starttime="20191011 10:18:49.739" endtime="20191011 10:18:49.740"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${DIR}</arg>
+</arguments>
+<status status="PASS" starttime="20191011 10:18:49.740" endtime="20191011 10:18:49.740"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:49.738" endtime="20191011 10:18:49.740"></status>
+</kw>
+<kw name="Inserir massa de dados PIC" library="Conexao">
+<kw name="Execute Sql Script" library="DatabaseLibrary">
+<doc>Executes the content of the `sqlScriptFileName` as SQL commands. Useful for setting the database to a known
+state before running your tests, or clearing out your test data after running each a test. Set optional input
+`sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
+<arguments>
+<arg>C:\\UNJ\\sajmp-oraculo-frontend\\acceptance-tests\\GUI\\resources/commonDatabase/insertProcessoPIC.txt</arg>
+</arguments>
+<assign>
+<var>${QUERY}</var>
+</assign>
+<msg timestamp="20191011 10:18:49.742" level="INFO">Executing : Execute SQL Script  |  C:\UNJ\sajmp-oraculo-frontend\acceptance-tests\GUI\resources/commonDatabase/insertProcessoPIC.txt </msg>
+<msg timestamp="20191011 10:18:50.007" level="INFO">${QUERY} = None</msg>
+<status status="PASS" starttime="20191011 10:18:49.741" endtime="20191011 10:18:50.007"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:49.741" endtime="20191011 10:18:50.008"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:45.355" endtime="20191011 10:18:50.008"></status>
+</kw>
+<test id="s1-s1-t1" name="Test case 19: PESQUISA POR SITUAÇÃO E PARTE INTERESSADA QUE POSSUAM PROCEDIMENTOS PÚBLICOS VINCULADOS">
+<kw name="Dado que a página inicial do portal seja acessada" library="Resource">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BANCO}'=='Postgres'</arg>
+<arg>Abrir URL Postgres</arg>
+</arguments>
+<kw name="Abrir URL Postgres" library="Resource">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://172.23.70.47:90/portaltransparencia/procedimentoinvestigatorio</arg>
+</arguments>
+<msg timestamp="20191011 10:18:50.027" level="INFO">Opening url 'http://172.23.70.47:90/portaltransparencia/procedimentoinvestigatorio'</msg>
+<status status="PASS" starttime="20191011 10:18:50.027" endtime="20191011 10:18:53.041"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:50.026" endtime="20191011 10:18:53.041"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:50.025" endtime="20191011 10:18:53.041"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BANCO}'=='Oracle'</arg>
+<arg>Abrir URL Oracle</arg>
+</arguments>
+<status status="PASS" starttime="20191011 10:18:53.042" endtime="20191011 10:18:53.042"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:50.009" endtime="20191011 10:18:53.042"></status>
+</kw>
+<kw name="E seja informado 'Cadastrado' no campo 'Situação' e 'Fabiana Helena Batista' no campo 'Parte interessada'" library="Resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO_SITUACAO}</arg>
+<arg>${SITUACAO_USO}</arg>
+</arguments>
+<msg timestamp="20191011 10:18:53.046" level="INFO">Typing text 'Cadastrado' into text field 'xpath=//*[@id='idSituacao']/div/div/div[1]/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20191011 10:18:53.045" endtime="20191011 10:18:53.345"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20191011 10:18:53.346" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20191011 10:18:53.346" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20191011 10:18:53.345" endtime="20191011 10:18:53.397"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CAMPO_PARTE_INTERESSADA}</arg>
+<arg>${PARTE_INTERESSADA}</arg>
+</arguments>
+<msg timestamp="20191011 10:18:53.398" level="INFO">Typing text 'Fabiana Helena Batista' into text field 'id=parteInteressada'.</msg>
+<status status="PASS" starttime="20191011 10:18:53.397" endtime="20191011 10:18:53.909"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20191011 10:18:53.910" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20191011 10:18:53.910" level="INFO">Pressing special key RETURN to browser.</msg>
+<status status="PASS" starttime="20191011 10:18:53.909" endtime="20191011 10:18:53.918"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:53.045" endtime="20191011 10:18:53.918"></status>
+</kw>
+<kw name="Quando o botão 'Consultar' for clicado" library="Resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnConsultar</arg>
+</arguments>
+<msg timestamp="20191011 10:18:53.920" level="INFO">Clicking element 'id=btnConsultar'.</msg>
+<status status="PASS" starttime="20191011 10:18:53.919" endtime="20191011 10:18:54.021"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:53.919" endtime="20191011 10:18:54.021"></status>
+</kw>
+<kw name="Então o sistema deve apresentar os procedimentos que possuam sigilo 'P' vinculados a situação e a parte interessada informados E sejam procedimentos do tipo '0602' E sua situação esteja entre uma das opções '('A','B','D','E','J','L','N','P','Q','S','Z','O','V','Y','R','T')'" library="Resource">
+<kw name="Verifica a quantidade de procedimentos vinculados a situação e a parte interessada com as características '${SIGILO}', '${TIPO_PROCEDIMENTO}', '${SITUACAO}'" library="ResourceDB">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>C:\\UNJ\\sajmp-oraculo-frontend\\acceptance-tests\\GUI\\resources/${DIR}/QuantidadeSituacaoParte.txt</arg>
+</arguments>
+<assign>
+<var>${QUERY}</var>
+</assign>
+<msg timestamp="20191011 10:18:54.027" level="INFO" html="yes">Getting file '&lt;a href="file://C:\UNJ\sajmp-oraculo-frontend\acceptance-tests\GUI\resources\databasePostgres\QuantidadeSituacaoParte.txt"&gt;C:\UNJ\sajmp-oraculo-frontend\acceptance-tests\GUI\resources\databasePostgres\QuantidadeSituacaoParte.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20191011 10:18:54.028" level="INFO">${QUERY} = SELECT count(*)
+FROM esajnome
+JOIN efmpparte ON esajnome.cdpessoa = efmpparte.cdpessoa
+JOIN efmpprocesso on efmpparte.cdprocesso = efmpprocesso.cdprocesso
+JOIN esajsitprocesso ON efmpprocesso.cdsituac...</msg>
+<status status="PASS" starttime="20191011 10:18:54.027" endtime="20191011 10:18:54.028"></status>
+</kw>
+<kw name="Replace Variables" library="BuiltIn">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>${QUERY}</arg>
+</arguments>
+<assign>
+<var>${QUERY}</var>
+</assign>
+<msg timestamp="20191011 10:18:54.030" level="FAIL">Resolving variable '${SORT_SITUACAO_PARTE[0][0]}' failed: Variable '${SORT_SITUACAO_PARTE}' not found.</msg>
+<status status="FAIL" starttime="20191011 10:18:54.028" endtime="20191011 10:18:54.030"></status>
+</kw>
+<status status="FAIL" starttime="20191011 10:18:54.026" endtime="20191011 10:18:54.030"></status>
+</kw>
+<status status="FAIL" starttime="20191011 10:18:54.025" endtime="20191011 10:18:54.030"></status>
+</kw>
+<status status="FAIL" starttime="20191011 10:18:50.008" endtime="20191011 10:18:54.031" critical="yes">Resolving variable '${SORT_SITUACAO_PARTE[0][0]}' failed: Variable '${SORT_SITUACAO_PARTE}' not found.</status>
+</test>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Deletar os registros</arg>
+<arg>AND</arg>
+<arg>Desconectar Base</arg>
+<arg>AND</arg>
+<arg>Fechar navegador</arg>
+</arguments>
+<kw name="Deletar os registros" library="ResourceDB">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${isPipeline}'=='False'</arg>
+<arg>Execução deletes</arg>
+</arguments>
+<kw name="Execução deletes" library="ResourceDB">
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BANCO}'=='Postgres'</arg>
+<arg>Execute Sql Script</arg>
+<arg>C:\\UNJ\\sajmp-oraculo-frontend\\acceptance-tests\\GUI\\resources/commonDatabase/deleteProcessoPostgres.txt</arg>
+</arguments>
+<assign>
+<var>${QUERY}</var>
+</assign>
+<kw name="Execute Sql Script" library="DatabaseLibrary">
+<doc>Executes the content of the `sqlScriptFileName` as SQL commands. Useful for setting the database to a known
+state before running your tests, or clearing out your test data after running each a test. Set optional input
+`sansTran` to True to run command without an explicit transaction commit or rollback.</doc>
+<arguments>
+<arg>C:\\UNJ\\sajmp-oraculo-frontend\\acceptance-tests\\GUI\\resources/commonDatabase/deleteProcessoPostgres.txt</arg>
+</arguments>
+<msg timestamp="20191011 10:18:54.045" level="INFO">Executing : Execute SQL Script  |  C:\UNJ\sajmp-oraculo-frontend\acceptance-tests\GUI\resources/commonDatabase/deleteProcessoPostgres.txt </msg>
+<status status="PASS" starttime="20191011 10:18:54.045" endtime="20191011 10:18:54.357"></status>
+</kw>
+<msg timestamp="20191011 10:18:54.357" level="INFO">${QUERY} = None</msg>
+<status status="PASS" starttime="20191011 10:18:54.044" endtime="20191011 10:18:54.358"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${BANCO}'=='Oracle'</arg>
+<arg>Execute Sql Script</arg>
+<arg>C:\\UNJ\\sajmp-oraculo-frontend\\acceptance-tests\\GUI\\resources/commonDatabase/deleteProcessoOracle.txt</arg>
+</arguments>
+<assign>
+<var>${QUERY}</var>
+</assign>
+<msg timestamp="20191011 10:18:54.358" level="INFO">${QUERY} = None</msg>
+<status status="PASS" starttime="20191011 10:18:54.358" endtime="20191011 10:18:54.358"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:54.043" endtime="20191011 10:18:54.359"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:54.043" endtime="20191011 10:18:54.359"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:54.042" endtime="20191011 10:18:54.359"></status>
+</kw>
+<kw name="Desconectar Base" library="Conexao">
+<kw name="Disconnect From Database" library="DatabaseLibrary">
+<doc>Disconnects from the database.</doc>
+<msg timestamp="20191011 10:18:54.360" level="INFO">Executing : Disconnect From Database</msg>
+<status status="PASS" starttime="20191011 10:18:54.360" endtime="20191011 10:18:54.360"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:54.359" endtime="20191011 10:18:54.360"></status>
+</kw>
+<kw name="Fechar navegador" library="Resource">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20191011 10:18:54.361" endtime="20191011 10:18:56.654"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:54.360" endtime="20191011 10:18:56.654"></status>
+</kw>
+<status status="PASS" starttime="20191011 10:18:54.042" endtime="20191011 10:18:56.654"></status>
+</kw>
+<status status="FAIL" starttime="20191011 10:18:44.829" endtime="20191011 10:18:56.654"></status>
+</suite>
+<status status="FAIL" starttime="20191011 10:18:44.787" endtime="20191011 10:18:56.658"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Story-214266">Story-214266</stat>
+<stat pass="0" fail="1" id="s1-s1" name="TestSuiteProcedimentoInvestigatorio">Story-214266.TestSuiteProcedimentoInvestigatorio</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,114 @@
+
+begin ;
+--------------------------------- DELETANDO VINCULOS DO PROCESSO 062019000009999
+delete from efmpvinculoproc where cdprocessopai='01002O7IE1000';
+delete from efmpvinculoproc where cdprocessopai='01002O7IE1011';
+--------------------------------- PROCESSO 062019000009999
+delete from efmpdistprocesso where cdprocesso='01002O7IE1000';
+delete from efmpprocessomv where cdprocesso='01002O7IE1000';
+delete from efmpparte where cdprocesso='01002O7IE1000';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1000';
+delete from efmpprocesso where cdprocesso='01002O7IE1000';
+delete from esajobjeto where cdobjeto='0N0000009AAAA';
+-------------------------------- PROCESSO 062019000009998
+delete from efmpdistprocesso where cdprocesso='01002O7IE1001';
+delete from efmpprocessomv where cdprocesso='01002O7IE1001';
+delete from efmpparte where cdprocesso='01002O7IE1001';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1001';
+delete from efmpprocesso where cdprocesso='01002O7IE1001';
+delete from esajobjeto where cdobjeto='0N0000009AAAB';
+--------------------------------- PROCESSO 062019000009997
+delete from efmpdistprocesso where cdprocesso='01002O7IE1002';
+delete from efmpprocessomv where cdprocesso='01002O7IE1002';
+delete from efmpparte where cdprocesso='01002O7IE1002';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1002';
+delete from efmpprocesso where cdprocesso='01002O7IE1002';
+delete from esajobjeto where cdobjeto='0N0000009AAAC';
+--------------------------------- PROCESSO 062019000009996
+delete from efmpdistprocesso where cdprocesso='01002O7IE1003';
+delete from efmpprocessomv where cdprocesso='01002O7IE1003';
+delete from efmpparte where cdprocesso='01002O7IE1003';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1003';
+delete from efmpprocesso where cdprocesso='01002O7IE1003';
+delete from esajobjeto where cdobjeto='0N0000009AAAD';
+--------------------------------- PROCESSO 062019000009995
+delete from efmpdistprocesso where cdprocesso='01002O7IE1004';
+delete from efmpprocessomv where cdprocesso='01002O7IE1004';
+delete from efmpparte where cdprocesso='01002O7IE1004';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1004';
+delete from efmpprocesso where cdprocesso='01002O7IE1004';
+delete from esajobjeto where cdobjeto='0N0000009AAAE';
+--------------------------------- PROCESSO 062019000009994
+delete from efmpdistprocesso where cdprocesso='01002O7IE1005';
+delete from efmpprocessomv where cdprocesso='01002O7IE1005';
+delete from efmpparte where cdprocesso='01002O7IE1005';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1005';
+delete from efmpprocesso where cdprocesso='01002O7IE1005';
+delete from esajobjeto where cdobjeto='0N0000009AAAF';
+--------------------------------- PROCESSO 062019000009993
+delete from efmpdistprocesso where cdprocesso='01002O7IE1006';
+delete from efmpprocessomv where cdprocesso='01002O7IE1006';
+delete from efmpparte where cdprocesso='01002O7IE1006';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1006';
+delete from efmpprocesso where cdprocesso='01002O7IE1006';
+delete from esajobjeto where cdobjeto='0N0000009AAAG';
+--------------------------------- PROCESSO 062019000009992
+delete from efmpdistprocesso where cdprocesso='01002O7IE1007';
+delete from efmpprocessomv where cdprocesso='01002O7IE1007';
+delete from efmpparte where cdprocesso='01002O7IE1007';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1007';
+delete from efmpprocesso where cdprocesso='01002O7IE1007';
+delete from esajobjeto where cdobjeto='0N0000009AAAH';
+--------------------------------- PROCESSO 062019000009991
+delete from efmpdistprocesso where cdprocesso='01002O7IE1008';
+delete from efmpprocessomv where cdprocesso='01002O7IE1008';
+delete from efmpparte where cdprocesso='01002O7IE1008';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1008';
+delete from efmpprocesso where cdprocesso='01002O7IE1008';
+delete from esajobjeto where cdobjeto='0N0000009AAAI';
+--------------------------------- PROCESSO 062019000009990
+delete from efmpdistprocesso where cdprocesso='01002O7IE1009';
+delete from efmpprocessomv where cdprocesso='01002O7IE1009';
+delete from efmpparte where cdprocesso='01002O7IE1009';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1009';
+delete from efmpprocesso where cdprocesso='01002O7IE1009';
+delete from esajobjeto where cdobjeto='0N0000009AAAJ';
+--------------------------------- PROCESSO 062019000009989
+delete from efmpdistprocesso where cdprocesso='01002O7IE1010';
+delete from efmpprocessomv where cdprocesso='01002O7IE1010';
+delete from efmpparte where cdprocesso='01002O7IE1010';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1010';
+delete from efmpprocesso where cdprocesso='01002O7IE1010';
+delete from esajobjeto where cdobjeto='0N0000009AAAL';
+--------------------------------- PROCESSO 062019000009988
+delete from efmpdistloteit where cdprocesso='01002O7IE1011';
+delete from efmpdistlote where nulote in (2019100005, 2019100006, 2019100007, 2019100008, 2019100009, 2019100010);
+delete from efmpdistprocesso where cdprocesso='01002O7IE1011';
+delete from efmpprocessomv where cdprocesso='01002O7IE1011';
+delete from efmpparte where cdprocesso='01002O7IE1011';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1011';
+delete from efmpprocesso where cdprocesso='01002O7IE1011';
+delete from esajobjeto where cdobjeto='0N0000009AAAM';
+--------------------------------- PROCESSO 062019000009987
+delete from efmpdistprocesso where cdprocesso='01002O7IE1012';
+delete from efmpprocessomv where cdprocesso='01002O7IE1012';
+delete from efmpparte where cdprocesso='01002O7IE1012';
+delete from efmpprocesso2 where cdprocesso='01002O7IE1012';
+delete from efmpprocesso where cdprocesso='01002O7IE1012';
+delete from esajobjeto where cdobjeto='0N0000009AAAN';
+--------------------------------- DELETANDO PESSOAS E NOMES
+delete from esajnome where cdpessoa=100000;
+delete from esajpessoa where cdpessoa=100000;
+delete from esajnome where cdpessoa=100001;
+delete from esajpessoa where cdpessoa=100001;
+delete from esajnome where cdpessoa=100002;
+delete from esajpessoa where cdpessoa=100002;
+delete from esajnome where cdpessoa=100003;
+delete from esajpessoa where cdpessoa=100003;
+delete from esajnome where cdpessoa=100004;
+delete from esajpessoa where cdpessoa=100004;
+delete from esajnome where cdpessoa=100005;
+delete from esajpessoa where cdpessoa=100005;
+delete from esajnome where cdpessoa=100006;
+delete from esajpessoa where cdpessoa=100006;
+END;

@@ -1,0 +1,8 @@
+SELECT COUNT(*)
+FROM esajnome
+JOIN efmpparte ON esajnome.cdpessoa = efmpparte.cdpessoa
+JOIN efmpprocesso on efmpparte.cdprocesso = efmpprocesso.cdprocesso
+JOIN esajtipolocal ON efmpprocesso.cdtipolocal = esajtipolocal.cdtipolocal
+JOIN esajsitprocesso ON efmpprocesso.cdsituacaoprocesso = esajsitprocesso.cdsituacaoprocesso
+JOIN efmptipoprocesso ON efmpprocesso.cdtipoprocesso=efmptipoprocesso.cdtipoprocesso
+WHERE efmpprocesso.flsegredojustica='${SIGILO}' AND efmptipoprocesso.cdtipoprocesso = '${TIPO_PROCEDIMENTO}' AND efmpprocesso.cdsituacaoprocesso IN ('0','A','B','D','E','J','L','N','P','Q','Z','O','V','Y','R','T','G') AND esajnome.nmpessoa like '%${PARTE_INTERESSADA}%' AND efmpparte.flsegredojustica='N' AND efmpparte.flsituacao<>'E'

@@ -1,0 +1,7 @@
+SELECT COUNT(*)
+FROM efmpprocesso
+JOIN efmptipoprocesso ON efmpprocesso.cdtipoprocesso = efmptipoprocesso.cdtipoprocesso AND efmptipoprocesso.flexibenabuscaweb ='S'
+JOIN esajtipolocal ON efmpprocesso.cdtipolocal = esajtipolocal.cdtipolocal AND  esajtipolocal.flportaltransparen = 'S'
+JOIN esajsitprocesso ON efmpprocesso.cdsituacaoprocesso = esajsitprocesso.cdsituacaoprocesso
+JOIN esajlocal ON efmpprocesso.cdforo = esajlocal.cdforo AND efmpprocesso.cdtipolocal = esajlocal.cdtipolocal AND efmpprocesso.cdlocal = esajlocal.cdlocal
+WHERE efmptipoprocesso.cdtipoprocesso = '${TIPO_PROCEDIMENTO}' AND esajsitprocesso.cdsituacaoprocesso IN ('0','A','B','D','E','J','L','N','P','Q','Z','O','V','Y','R','T','G') and esajlocal.delocal='29ª Promotoria de Justiça da Comarca da Capital' and efmpprocesso.flsegredojustica = '${SIGILO}'
